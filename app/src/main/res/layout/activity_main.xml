@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/black"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/gray"/>
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/green"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/txtHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/blue"
+                android:gravity="center"
+                android:text="Fibonacci Series Generator"
+                android:textColor="@color/black"
+                android:minHeight="30dp" />
+
+            <EditText
+                android:id="@+id/etvStart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtHeading"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:hint="Starting Point Number"
+                android:inputType="number"
+                android:minHeight="50dp" />
+
+            <EditText
+                android:id="@+id/etvEnding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etvStart"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:hint="Ending Point Number"
+                android:inputType="number"
+                android:minHeight="50dp" />
+
+            <EditText
+                android:id="@+id/etvSeparator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etvEnding"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:hint="Separator To Use"
+                android:inputType="text"
+                android:minHeight="50dp" />
+
+            <Button
+                android:id="@+id/btnGenerate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etvSeparator"
+                android:text="Generate Series"
+                android:layout_marginTop="10dp"
+                android:background="@color/blue"/>
+
+            <TextView
+                android:id="@+id/txtResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnGenerate"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:hint="Fibonacci Series"
+                android:textColor="@color/black"
+                android:minHeight="30dp" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
